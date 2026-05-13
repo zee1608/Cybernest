@@ -20,7 +20,7 @@ export default function ContactPage() {
     setSent(true);
   };
 
-  const whatsappMsg = encodeURIComponent("Hello CyberNest Solutions, I need cybersecurity assistance.");
+  const whatsappMsg = encodeURIComponent("Hello SureDefense systems, I need cybersecurity assistance.");
   const waLink = `https://wa.me/265899916755?text=${whatsappMsg}`;
 
   return (
@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <Badge>// GET IN TOUCH</Badge>
           <h2 style={{ fontFamily: "monospace", color: "#fff", fontSize: "clamp(1.8rem, 4vw, 3rem)", marginTop: "1rem", letterSpacing: 3 }}>
-            Contact <span style={{ color: "#00ff9d" }}>CyberNest</span>
+            Contact <span style={{ color: "#00ff9d" }}>SureDefense systems</span>
           </h2>
           <p style={{ color: "#666", maxWidth: 540, margin: "1rem auto", lineHeight: 1.8 }}>
             Facing a cyber threat? Need a security audit? Reach out now — our team is ready to secure your systems.
@@ -47,7 +47,7 @@ export default function ContactPage() {
               onMouseEnter={e => e.currentTarget.style.background = "#25D36622"}
               onMouseLeave={e => e.currentTarget.style.background = "#25D36611"}
             >
-              <div style={{ fontSize: "2rem" }}>📲</div>
+              <div style={{ fontSize: "2rem" }}></div>
               <div>
                 <div style={{ color: "#25D366", fontFamily: "monospace", fontWeight: 700, letterSpacing: 1, fontSize: "0.9rem" }}>WhatsApp Us Instantly</div>
                 <div style={{ color: "#aaa", fontSize: "0.82rem", marginTop: 2 }}>+265 899 916 755</div>
@@ -56,10 +56,10 @@ export default function ContactPage() {
             </a>
 
             {[
-              { icon: "📍", label: "Location", val: "Blantyre & Lilongwe, Malawi" },
-              { icon: "📧", label: "Email", val: "info@cybernest.mw" },
-              { icon: "📞", label: "Phone", val: "+265 899 916 755" },
-              { icon: "🕒", label: "Response", val: "Within 2 hours (Business Hours)" },
+              { label: "Location", val: "Blantyre & Lilongwe, Malawi" },
+              { label: "Email", val: "zeechimzere@gmail.com" },
+              { label: "Phone", val: "+265 899 916 755" },
+              { label: "Response", val: "Within 24 hours (Business Hours)" },
             ].map(c => (
               <div key={c.label} style={{
                 display: "flex", gap: "1rem", alignItems: "center",
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
             <div style={{ marginTop: "1.5rem", padding: "1rem", background: "#00ff9d08", border: "1px solid #00ff9d22" }}>
               <p style={{ color: "#555", fontFamily: "monospace", fontSize: "0.72rem", letterSpacing: 1, lineHeight: 1.7 }}>
-                🔒 ALL COMMUNICATIONS ARE ENCRYPTED<br />
+                ALL COMMUNICATIONS ARE ENCRYPTED<br />
                 We operate under strict confidentiality agreements. Your security inquiries are safe with us.
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
           <div style={{ border: "1px solid #1c2c1c", padding: "2.5rem", background: "rgba(0,0,0,0.3)" }}>
             {sent ? (
               <div style={{ textAlign: "center", padding: "3rem 0" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>✅</div>
+                <div style={{ fontSize: "3rem", marginBottom: "1rem" }}></div>
                 <h3 style={{ color: "#00ff9d", fontFamily: "monospace", letterSpacing: 2 }}>MESSAGE_RECEIVED</h3>
                 <p style={{ color: "#666", marginTop: 8 }}>We'll respond within 2 business hours.</p>
                 <button onClick={() => setSent(false)} style={{
@@ -128,7 +128,8 @@ export default function ContactPage() {
                       <option>Mobile Money Security</option>
                       <option>Security Awareness Training</option>
                       <option>Incident Response</option>
-                      <option>Data Protection & Compliance</option>
+                      <option>PC System Repair Services</option>
+                      <option>GRC(Governance, Risk, and Compliance)Services</option>
                       <option>General Inquiry</option>
                     </select>
                   </div>

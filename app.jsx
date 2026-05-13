@@ -23,7 +23,7 @@ function MatrixRain() {
       ctx.font = "14px monospace";
       drops.forEach((y, i) => {
         const char = GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
-        ctx.fillStyle = i % 3 === 0 ? "#00ff9d33" : "#00e5ff11";
+        ctx.fillStyle = i % 3 === 0 ? "#00ff9d33" : "#062727e7";
         ctx.fillText(char, i * 20, y * 20);
         if (y * 20 > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
@@ -34,7 +34,7 @@ function MatrixRain() {
     window.addEventListener("resize", resize);
     return () => { clearInterval(id); window.removeEventListener("resize", resize); };
   }, []);
-  return <canvas ref={canvasRef} style={{ position: "fixed", top: 0, left: 0, zIndex: 0, opacity: 0.5, pointerEvents: "none" }} />;
+  return <canvas ref={canvasRef} style={{ position: "fixed",top: 0, left: 0, zIndex: 0, opacity: 0.5, pointerEvents: "none" }} />;
 }
 
 function Navbar({ page, setPage }) {
@@ -48,7 +48,7 @@ function Navbar({ page, setPage }) {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: scrolled ? "rgba(6,10,18,0.97)" : "transparent",
+      background: scrolled ? "rgba(13, 13, 15, 0.97)" : "transparent",
       borderBottom: scrolled ? "1px solid #00ff9d22" : "none",
       backdropFilter: scrolled ? "blur(12px)" : "none",
       transition: "all 0.4s ease",
@@ -62,10 +62,10 @@ function Navbar({ page, setPage }) {
           display: "flex", alignItems: "center", justifyContent: "center",
           position: "relative", transform: "rotate(45deg)"
         }}>
-          <span style={{ transform: "rotate(-45deg)", fontSize: 14, fontWeight: 900, color: "#00ff9d", fontFamily: "monospace" }}>CN</span>
+          <span style={{ transform: "rotate(-45deg)", fontSize: 14, fontWeight: 900, color: "#f2f6f6", fontFamily: "monospace" }}>SDS</span>
         </div>
-        <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "1.1rem", color: "#fff", letterSpacing: 2 }}>
-          CyberNest<span style={{ color: "#00ff9d" }}>_</span>
+        <span style={{ fontFamily: "'Courier New', monospace", fontWeight: 700, fontSize: "1.1rem", color: "#fffbfb", letterSpacing: 2 }}>
+          SureDefense systems<span style={{ color: "#00ff9d" }}>_</span>
         </span>
       </div>
 
@@ -74,7 +74,7 @@ function Navbar({ page, setPage }) {
         {NAV_LINKS.map(link => (
           <button key={link} onClick={() => setPage(link)} style={{
             background: "none", border: "none", cursor: "pointer",
-            color: page === link ? "#00ff9d" : "#aaa",
+            color: page === link ? "#00ff9d" : "#f6f1f1",
             fontFamily: "'Courier New', monospace", fontSize: "0.85rem",
             letterSpacing: 2, textTransform: "uppercase",
             borderBottom: page === link ? "1px solid #00ff9d" : "1px solid transparent",
@@ -82,7 +82,7 @@ function Navbar({ page, setPage }) {
           }}>{link}</button>
         ))}
         <button onClick={() => setPage("Contact")} style={{
-          background: "transparent", border: "1px solid #00ff9d",
+          background: "transparent", border: "1px solid #042116",
           color: "#00ff9d", fontFamily: "'Courier New', monospace",
           fontSize: "0.8rem", letterSpacing: 2, padding: "8px 18px",
           cursor: "pointer", transition: "all 0.2s",
@@ -108,7 +108,7 @@ function Navbar({ page, setPage }) {
           {NAV_LINKS.map(link => (
             <button key={link} onClick={() => { setPage(link); setMenuOpen(false); }} style={{
               background: "none", border: "none", cursor: "pointer",
-              color: page === link ? "#00ff9d" : "#ccc",
+              color: page === link ? "#00ff9d" : "#dfdbdb",
               fontFamily: "'Courier New', monospace", fontSize: "1rem",
               letterSpacing: 2, textAlign: "left",
             }}>{link}</button>
@@ -128,24 +128,24 @@ function Navbar({ page, setPage }) {
 
 
 function Footer({ setPage }) {
-  const wa = `https://wa.me/265899916755?text=${encodeURIComponent("Hello CyberNest Solutions")}`;
+  const wa = `https://wa.me/265899916755?text=${encodeURIComponent("Hello SureDefense systems")}`;
   return (
     <footer style={{ borderTop: "1px solid #0a1a0a", background: "rgba(0,0,0,0.6)", padding: "3rem 2rem 2rem", position: "relative", zIndex: 1 }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem", marginBottom: "2rem" }}>
         <div>
-          <div style={{ fontFamily: "monospace", fontWeight: 700, color: "#00ff9d", letterSpacing: 2, marginBottom: "0.8rem" }}>CyberNest Solutions</div>
+          <div style={{ fontFamily: "monospace", fontWeight: 700, color: "#00ff9d", letterSpacing: 2, marginBottom: "0.8rem" }}>SureDefense systems</div>
           <p style={{ color: "#444", fontSize: "0.82rem", lineHeight: 1.7 }}>Malawi's trusted cybersecurity partner — protecting individuals, businesses, and institutions from digital threats.</p>
         </div>
         <div>
           <div style={{ color: "#555", fontFamily: "monospace", fontSize: "0.72rem", letterSpacing: 2, marginBottom: "1rem" }}>NAVIGATION</div>
           {NAV_LINKS.map(l => (
             <button key={l} onClick={() => setPage(l)} style={{
-              display: "block", background: "none", border: "none", color: "#555",
+              display: "block", background: "none", border: "none", color: "#c5c5c5",
               fontFamily: "monospace", fontSize: "0.82rem", letterSpacing: 1, cursor: "pointer",
               padding: "3px 0", transition: "color 0.2s", textAlign: "left"
             }}
               onMouseEnter={e => e.target.style.color = "#00ff9d"}
-              onMouseLeave={e => e.target.style.color = "#555"}
+              onMouseLeave={e => e.target.style.color = "#bcb9b9"}
             >{l}</button>
           ))}
         </div>
@@ -154,13 +154,13 @@ function Footer({ setPage }) {
           <a href={wa} target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
             color: "#25D366", textDecoration: "none", fontFamily: "monospace", fontSize: "0.82rem"
-          }}>📲 WhatsApp: +265 899 916 755</a>
-          <p style={{ color: "#444", fontFamily: "monospace", fontSize: "0.8rem", marginTop: 8 }}>📧 info@cybernest.mw</p>
-          <p style={{ color: "#444", fontFamily: "monospace", fontSize: "0.8rem", marginTop: 4 }}>📍 Blantyre & Lilongwe, Malawi</p>
+          }}> WhatsApp: +265 899 916 755</a>
+          <p style={{ color: "#444", fontFamily: "monospace", fontSize: "0.8rem", marginTop: 8 }}> zeechimzere@gmail.com</p>
+          <p style={{ color: "#444", fontFamily: "monospace", fontSize: "0.8rem", marginTop: 4 }}> Blantyre & Lilongwe, Malawi</p>
         </div>
       </div>
       <div style={{ borderTop: "1px solid #0a1a0a", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-        <p style={{ color: "#333", fontFamily: "monospace", fontSize: "0.72rem" }}>© 2024 CyberNest Solutions. All rights reserved.</p>
+        <p style={{ color: "#333", fontFamily: "monospace", fontSize: "0.72rem" }}>© 2026 SureDefense systems. All rights reserved.</p>
         <p style={{ color: "#222", fontFamily: "monospace", fontSize: "0.7rem" }}>PROTECT · DETECT · RESPOND</p>
       </div>
     </footer>
@@ -180,7 +180,8 @@ export default function App() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#060a12", color: "#eee", fontFamily: "'Georgia', serif" }}>
+    <div style={{ minHeight: "100vh", background: "#10072a", color: "#0a0707", fontFamily: "'Georgia', serif" }}>
+    <style>{`html, body { background-color: #10072a; margin: 0; padding: 0; }`}</style> 
       <MatrixRain />
       <Navbar page={page} setPage={setPage} />
       <main style={{ position: "relative", zIndex: 1 }}>

@@ -3,7 +3,7 @@ import { useState } from "react";
 function Badge({ children }) {
   return (
     <span style={{
-      background: "#00ff9d15", border: "1px solid #00ff9d44",
+      background: "#0f0f12eb", border: "1px solid #00ff9d44",
       color: "#00ff9d", fontFamily: "monospace", fontSize: "0.7rem",
       letterSpacing: 2, padding: "3px 10px", textTransform: "uppercase"
     }}>{children}</span>
@@ -20,9 +20,9 @@ function StoryCard({ date, title, tag, tagColor, summary, details, source }) {
       <div style={{ padding: "1.5rem 2rem" }}>
         <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "0.8rem", flexWrap: "wrap" }}>
           <span style={{ background: `${tagColor}22`, color: tagColor, fontFamily: "monospace", fontSize: "0.7rem", letterSpacing: 2, padding: "3px 10px", border: `1px solid ${tagColor}55` }}>{tag}</span>
-          <span style={{ color: "#444", fontFamily: "monospace", fontSize: "0.75rem" }}>{date}</span>
+          <span style={{ color: "#504e4e", fontFamily: "monospace", fontSize: "0.75rem" }}>{date}</span>
         </div>
-        <h3 style={{ color: "#eee", fontFamily: "monospace", fontSize: "1rem", letterSpacing: 1, marginBottom: "0.7rem", lineHeight: 1.4 }}>{title}</h3>
+        <h3 style={{ color: "#f4f1f1", fontFamily: "monospace", fontSize: "1rem", letterSpacing: 1, marginBottom: "0.7rem", lineHeight: 1.4 }}>{title}</h3>
         <p style={{ color: "#666", fontSize: "0.88rem", lineHeight: 1.7 }}>{summary}</p>
         {expanded && <p style={{ color: "#888", fontSize: "0.85rem", lineHeight: 1.8, marginTop: "1rem", borderTop: "1px solid #1a2a1a", paddingTop: "1rem" }}>{details}</p>}
         {source && expanded && <p style={{ color: "#444", fontSize: "0.75rem", fontFamily: "monospace", marginTop: 8 }}>SOURCE: {source}</p>}
@@ -100,9 +100,9 @@ export default function StoriesPage() {
           background: "#ff444411", border: "1px solid #ff444444", padding: "1rem 1.5rem",
           marginBottom: "2.5rem", display: "flex", gap: "1rem", alignItems: "flex-start"
         }}>
-          <span style={{ color: "#ff4444", fontSize: "1.2rem", marginTop: 2 }}>⚠</span>
+          <span style={{ color: "#ff4444", fontSize: "1.2rem", marginTop: 2 }}></span>
           <p style={{ color: "#ff7777", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, margin: 0 }}>
-            ADVISORY: If you or your business has been affected by cybercrime, contact CyberNest Solutions immediately or report to Malawi Police Service Cybercrime Unit.
+            ADVISORY: If you or your business has been affected by cybercrime, contact SureDefense systems immediately or report to Malawi Police Service Cybercrime Unit.
           </p>
         </div>
 

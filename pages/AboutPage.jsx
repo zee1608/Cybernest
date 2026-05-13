@@ -18,12 +18,12 @@ function ServiceCard({ icon, title, desc, features }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         border: `1px solid ${hovered ? "#00ff9d" : "#1c2c1c"}`,
-        padding: "2rem", background: hovered ? "rgba(0,255,157,0.06)" : "rgba(0,255,157,0.02)",
+        padding: "2rem", background: hovered ? "rgba(0,255,157,0.06)" : "rgba(5, 7, 6, 0.97)",
         transition: "all 0.3s", cursor: "default"
       }}>
       <div style={{ fontSize: "2.2rem", marginBottom: "1rem" }}>{icon}</div>
       <h3 style={{ color: "#00ff9d", fontFamily: "monospace", letterSpacing: 2, fontSize: "0.95rem", textTransform: "uppercase", marginBottom: "0.8rem" }}>{title}</h3>
-      <p style={{ color: "#777", lineHeight: 1.7, fontSize: "0.88rem", marginBottom: "1.2rem" }}>{desc}</p>
+      <p style={{ color: "#f5f2f2", lineHeight: 1.7, fontSize: "0.88rem", marginBottom: "1.2rem" }}>{desc}</p>
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {features.map(f => (
           <li key={f} style={{ color: "#555", fontSize: "0.8rem", fontFamily: "monospace", padding: "3px 0", borderTop: "1px solid #1a2a1a" }}>
@@ -38,34 +38,39 @@ function ServiceCard({ icon, title, desc, features }) {
 export default function AboutPage() {
   const services = [
     {
-      icon: "🔬", title: "Vulnerability Assessment",
+      title: "Vulnerability Assessment",
       desc: "Comprehensive scanning and analysis of your systems to identify security weaknesses before attackers exploit them.",
       features: ["Network Infrastructure Scanning", "Web App Vulnerability Testing", "Configuration Audits", "CVE Identification & Prioritization"]
     },
     {
-      icon: "⚔️", title: "Penetration Testing",
+       title: "Penetration Testing",
       desc: "Ethical hacking simulations that mirror real-world attacks — exposing your true security posture under controlled conditions.",
       features: ["Black/Grey/White Box Testing", "Social Engineering Simulation", "API & Mobile App Pentesting", "Full Red Team Exercises"]
     },
     {
-      icon: "📱", title: "Mobile Money Security",
+     title: "Mobile Money Security",
       desc: "Specialized audits targeting Mpamba, Airtel Money, and mobile banking platforms common across Malawi.",
       features: ["Agent Network Security Review", "SIM Swap Attack Mitigation", "Transaction Fraud Detection", "USSD Security Analysis"]
     },
     {
-      icon: "🎓", title: "Security Awareness Training",
+     title: "Security Awareness Training",
       desc: "Empowering your staff to become the first line of defense against phishing, social engineering, and insider threats.",
       features: ["Phishing Simulation Campaigns", "Employee Security Workshops", "Policy Development", "Incident Reporting Procedures"]
     },
     {
-      icon: "🔒", title: "Data Protection & Compliance",
-      desc: "Align with MACRA regulations and international frameworks to protect customer data and avoid costly penalties.",
-      features: ["GDPR/ISO 27001 Alignment", "Data Classification", "Privacy Impact Assessments", "Regulatory Gap Analysis"]
-    },
-    {
-      icon: "🚨", title: "Incident Response",
+     title: "Incident Response",
       desc: "24/7 rapid-response team to contain breaches, preserve forensic evidence, and restore your operations.",
       features: ["Emergency Breach Containment", "Digital Forensics", "Malware Removal & Recovery", "Post-Incident Reporting"]
+    },
+    {
+     title: "PC System Repair Services",
+      desc: "Professional PC repair and troubleshooting services focused on restoring system functionality, recovering data, and improving overall system performance and security",
+      features: ["Password Recovery & Login Bypass","Data Recovery & System Restoration","Startup Repair & System File Fixes","Virus & Malware Removal"]
+    },
+    {
+     title: "GRC (Governance, Risk, and Compliance) Services",
+      desc: "Helping organizations improve cybersecurity governance, manage risks, and maintain compliance through security policies, assessments, and best practices",
+      features: ["Security Policy Development","Risk Assessment & Management","Compliance & Security Best Practices","Security Audits & Vulnerability Checks"]
     },
   ];
 
@@ -78,7 +83,7 @@ export default function AboutPage() {
             Our <span style={{ color: "#00ff9d" }}>Services</span>
           </h2>
           <p style={{ color: "#666", maxWidth: 580, margin: "1rem auto", lineHeight: 1.8 }}>
-            CyberNest Solutions delivers end-to-end cybersecurity services built for the Malawian digital landscape —
+            SureDefense Systems delivers end-to-end cybersecurity services built for the Malawian digital landscape —
             from large enterprises to SMEs and financial institutions.
           </p>
         </div>
@@ -89,12 +94,11 @@ export default function AboutPage() {
 
         <div style={{ marginTop: "5rem", border: "1px solid #1c2c1c", padding: "3rem", background: "rgba(0,255,157,0.02)" }}>
           <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-            <Badge>// WHY CYBERNEST?</Badge>
+            <Badge>// WHY SureDefense systems?</Badge>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "2rem" }}>
             {[
               { v: "Local Expertise", d: "Deep understanding of Malawi's telecom infrastructure and digital payment systems." },
-              { v: "Certified Professionals", d: "Our team holds OSCP, CEH, CISSP, and CompTIA Security+ certifications." },
               { v: "Rapid Deployment", d: "On-site assessments across all regions — Lilongwe, Blantyre, Mzuzu and beyond." },
               { v: "Confidential Results", d: "All engagement reports are fully encrypted and delivered under strict NDA." },
             ].map(i => (

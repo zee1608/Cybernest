@@ -39,7 +39,7 @@ function GlitchHeading({ text, className = "" }) {
 function Badge({ children }) {
   return (
     <span style={{
-      background: "#00ff9d15", border: "1px solid #00ff9d44",
+      background: "#043f32ea", border: "1px solid #00ff9d44",
       color: "#00ff9d", fontFamily: "monospace", fontSize: "0.7rem",
       letterSpacing: 2, padding: "3px 10px", textTransform: "uppercase"
     }}>{children}</span>
@@ -50,7 +50,7 @@ function StatCard({ value, label }) {
   return (
     <div style={{
       border: "1px solid #00ff9d33", padding: "1.5rem", textAlign: "center",
-      background: "rgba(0,255,157,0.04)",
+      background: "rgba(18, 15, 19, 0.94)",
     }}>
       <div style={{ fontSize: "2.4rem", fontWeight: 900, fontFamily: "monospace", color: "#00ff9d", lineHeight: 1 }}>{value}</div>
       <div style={{ color: "#666", fontSize: "0.75rem", letterSpacing: 2, marginTop: 6, textTransform: "uppercase" }}>{label}</div>
@@ -65,8 +65,7 @@ export default function HomePage({ setPage }) {
         minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
         flexDirection: "column", padding: "8rem 2rem 4rem", textAlign: "center", position: "relative", zIndex: 1
       }}>
-        <Badge>// MALAWI'S CYBER DEFENSE UNIT</Badge>
-        <GlitchHeading text="CyberNest Solutions" className="" />
+        <GlitchHeading text="SureDefense systems" className="" />
         <style>{`
           h1 { font-family: 'Courier New', monospace; font-size: clamp(2.2rem, 6vw, 5rem); font-weight: 900;
             color: #fff; margin: 1.2rem 0 0.5rem; letter-spacing: 4px; line-height: 1.1; }
@@ -98,7 +97,7 @@ export default function HomePage({ setPage }) {
           }}
             onMouseEnter={e => { e.target.style.background = "#ff4444"; e.target.style.color = "#000"; }}
             onMouseLeave={e => { e.target.style.background = "transparent"; e.target.style.color = "#ff4444"; }}
-          >LATEST THREATS ⚠</button>
+          >LATEST THREATS </button>
         </div>
 
         <div style={{ position: "absolute", bottom: 40, left: "50%", transform: "translateX(-50%)", animation: "bounce 2s infinite" }}>
@@ -111,10 +110,10 @@ export default function HomePage({ setPage }) {
       <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
           {[
-            { icon: "🛡️", title: "Defense", desc: "Protecting your digital assets from malicious actors, malware, ransomware, and unauthorized intrusion at every layer of your infrastructure." },
-            { icon: "🔍", title: "Detection", desc: "Continuous monitoring and threat intelligence to identify suspicious activity, vulnerabilities, and breaches before they escalate." },
-            { icon: "⚡", title: "Response", desc: "Rapid incident response protocols, forensic analysis, and recovery strategies to minimize damage and restore operations swiftly." },
-            { icon: "🔐", title: "Compliance", desc: "Ensuring your systems meet local and international data protection standards — safeguarding your reputation and your clients' trust." },
+            { title: "Defense", desc: "Protecting your digital assets from malicious actors, malware, ransomware, and unauthorized intrusion at every layer of your infrastructure." },
+            { title: "Detection", desc: "Continuous monitoring and threat intelligence to identify suspicious activity, vulnerabilities, and breaches before they escalate." },
+            { title: "Response", desc: "Rapid incident response protocols, forensic analysis, and recovery strategies to minimize damage and restore operations swiftly." },
+            { title: "Compliance", desc: "Ensuring your systems meet local and international data protection standards — safeguarding your reputation and your clients' trust." },
           ].map(c => (
             <div key={c.title} style={{
               border: "1px solid #1a2a1a", padding: "2rem", background: "rgba(0,255,157,0.03)",
